@@ -1,0 +1,26 @@
+apple2user (0.1.0-11) unstable; urgency=low
+
+  * Fix postinst script
+  * Add local config.txt
+  * Remove dependency on gsport-exta (now just gsport)
+
+ -- David Schmenk <dschmenk@apple2pie>  Tue, 03 Dec 2013 16:05:54 -0800
+
+apple2user (0.1.0-3) unstable; urgency=low
+
+  * Fix postinst script
+
+ -- David Schmenk <dschmenk@apple2pie>  Tue, 03 Dec 2013 15:34:29 -0800
+
+apple2user (0.1.0-2) UNRELEASED; urgency=low
+
+  * Update dependency versions
+  * 
+
+ -- David Schmenk <dschmenk@apple2pie>  Tue, 03 Dec 2013 14:59:13 -0800
+
+apple2user (0.1.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- David Schmenk <dschmenk@apple2pie>  Mon, 02 Dec 2013 09:59:32 -0800

@@ -1,0 +1,15 @@
+Source: apple2user
+Section: unknown
+Priority: extra
+Maintainer: David Schmenk <dschmenk@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage:
+#Vcs-Git: git://git.debian.org/collab-maint/gsport.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/gsport.git;a=summary
+
+Package: apple2user
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, gsport (>= 0.3.0-11)
+Description: User for Apple II emulator
+ User for GSport full-screen emulator
