@@ -36,7 +36,7 @@ case "$1" in
         chown apple2:apple2 /home/apple2/prodos
         chown apple2:apple2 /home/apple2/.bash_login
     fi
-    if [ ! -e /home/appple2/config.txt ] ; then
+    if [ ! -e /home/apple2/config.txt ] ; then
         cp /usr/share/gsport/config.template /home/apple2/config.txt
         chown apple2:apple2 /home/apple2/config.txt
     fi
