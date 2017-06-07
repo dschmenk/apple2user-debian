@@ -5,8 +5,6 @@ DISTDIR=./$(DIST)
 
 apple2user:
 
-clean:
-
 install:
 
 dist:
@@ -16,6 +14,14 @@ dist:
 	cp -R ./debian $(DISTDIR)
 	-chmod -R a+r $(DISTDIR)
 	tar czf $(DIST).tar.gz $(DISTDIR)
+
+clean:
+	-rm $(PACKAGE)_*
+	-rm *.deb
+	-rm -rf $(DISTDIR)
+	-rm *.tar.gz
+	-rm src/vars
+	-rm *~
 
 deb:
 	$(MAKE) dist

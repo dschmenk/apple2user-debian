@@ -21,7 +21,7 @@ set -e
 case "$1" in
     configure)
     if [ "$(grep apple2 /etc/passwd)" = "" ] ; then
-        useradd -m -G audio,video,netdev,input,fuse,gsport,plugdev,sudo apple2
+        useradd -m -G audio,video,netdev,input,gsport,plugdev,sudo apple2
         passwd -d apple2
         echo "apple2 ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
         getttyline=`grep "1:2345:respawn:/sbin/getty" /etc/inittab`
@@ -46,6 +46,7 @@ case "$1" in
         chown apple2:apple2 /home/apple2/.bash_login
         chown apple2:apple2 /home/apple2/.bash_logout
     fi
+    echo "apple2:forever" | chpasswd
     if [ ! -e /home/apple2/config.txt ] ; then
         cp /usr/share/gsport/config.template /home/apple2/config.txt
         chown apple2:apple2 /home/apple2/config.txt
