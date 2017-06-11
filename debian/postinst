@@ -25,10 +25,12 @@ case "$1" in
         passwd -d apple2
         echo "apple2:forever" | chpasswd
         echo "apple2 ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
-        getttyline=`grep "1:2345:respawn:/sbin/getty" /etc/inittab`
-	if [ "$getttyline" != "" ] ; then
-	    mv /etc/inittab /etc/inittab.bak
-	    sed 's/^1:2345:respawn:\/sbin\/getty/1:2345:respawn:\/sbin\/getty --autologin apple2/' /etc/inittab.bak > /etc/inittab
+	if [ -x /etc/inittab ] ; then
+		getttyline=`grep "1:2345:respawn:/sbin/getty" /etc/inittab`
+		if [ "$getttyline" != "" ] ; then
+		    mv /etc/inittab /etc/inittab.bak
+		    sed 's/^1:2345:respawn:\/sbin\/getty/1:2345:respawn:\/sbin\/getty --autologin apple2/' /etc/inittab.bak > /etc/inittab
+		fi
 	fi
         mkdir /home/apple2/prodos
         cat > /home/apple2/.bash_login <<-login
