@@ -33,6 +33,9 @@ case "$1" in
 		fi
 	fi
         mkdir /home/apple2/prodos
+	if [ -x /usr/share/gsport/GSport.desktop ] ; then
+		cp /usr/share/gsport/GSport.desktop /home/apple2/Desktop
+	fi
         cat > /home/apple2/.bash_login <<-login
 		if [ ! -e ~/prodos/s6d1.po ] ; then
 		    a2mount ~/prodos +rw
