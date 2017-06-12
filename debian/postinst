@@ -41,7 +41,9 @@ case "$1" in
 		    a2mount ~/prodos +rw
 		fi
 		gsport
-		startx
+		if [[ ! $(xdpyinfo 2> /dev/null) ]] ; then
+		    startx
+		fi
 	login
         cat > /home/apple2/.bash_logout <<-logout
 		if [ -e ~/prodos/s6d1.po ] ; then

@@ -1,11 +1,12 @@
-apple2user (0.1.0-15) unstable; urgency=low
+apple2user (0.1.0-16) unstable; urgency=low
 
   * Remove add to group fuse (no longer used)
   * Set password on apple2 user
   * Check for /etc/inittab before modifying
   * Copy GSport deskop link
+  * Check for running X server before startx
 
- -- David Schmenk <dschmenk@gmail.com>  Wed, 07 Jun 2017 16:25:30 -0800
+ -- David Schmenk <dschmenk@gmail.com>  Mon, 12 Jun 2017 08:29:30 -0800
 
 apple2user (0.1.0-11) unstable; urgency=low
 
