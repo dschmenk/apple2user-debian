@@ -38,6 +38,7 @@ case "$1" in
 	fi
         cat > /home/apple2/.bash_login <<-login
 		if [ ! -e ~/prodos/s6d1.po ] ; then
+            while [ ! $(ps -C a2pid -o comm=) ]; do sleep 1; done
 		    a2mount ~/prodos +rw
 		fi
 		gsport
