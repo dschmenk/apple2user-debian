@@ -1,3 +1,9 @@
+apple2user (0.1.0-17) unstable; urgency=low
+
+  * Fix race condition between A2Pi 6.5 ROM boot and faster booting with systemd
+
+ -- David Schmenk <dschmenk@gmail.com>  Sun, 25 Apr 2021 13:29:30 -0800
+
 apple2user (0.1.0-16) unstable; urgency=low
 
   * Remove add to group fuse (no longer used)
