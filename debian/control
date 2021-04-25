@@ -3,7 +3,7 @@ Section: unknown
 Priority: extra
 Maintainer: David Schmenk <dschmenk@gmail.com>
 Build-Depends: debhelper (>= 8.0.0)
-Standards-Version: 3.9.4
+Standards-Version: 3.9.3
 Homepage:
 #Vcs-Git: git://git.debian.org/collab-maint/gsport.git
 #Vcs-Browser: http://git.debian.org/?p=collab-maint/gsport.git;a=summary
